@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Circuit</title>
+    <link rel="stylesheet" href="nav.css">
+    <script src="circuit.js"></script>
+   
+</head>
+<body>	
+                <!------------------------------------------ EN TETE DE LA PAGE------------------------------------------------------->
+
+
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="img/js.png">
+            </div>
+            <ul>
+                <li ><a href="mise2.html">Home</a></li>
+                <li><a href="pubicité.html">Publicités</a></li>
+                <li><a href="second degré.html" >Second D.</a></li>
+                <li ><a href="CRAMER.html" >Cramer</a></li>
+                <li class="active"><a href="circuit.html" >Circuit</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    <!------------------------------------------ EN TETE DE LA PAGE------------------------------------------------------->
+
+
+        <div id="bloc">
+                <h1>Calculs des intensités de cet circuit :</h1>
+                    <div id="b1">
+                         <img src="images/circuit.png" width="500" height="300" style="border-radius:20px 20px 20px 20px;">
+                    </div>
+                    <div id="b2">
+                        <h2>Donnees :</h2>
+                        <form name="formulaire"> 
+                            <labe >R1: </label><input type="text" name="r1"  size="20" class="resi"><br/><br/>
+                            <label>R2: </label><input type="text" name="r2" size="20" class="resi"/><br/><br/>
+                            <label>R3: </label><input type="text" name="r3" size="20" class="resi"><br/><br/>
+                            <label>U : </label><input type="text" name="u" size="20" class="resi"><br/><br/>
+                            <input type="button" value="Calculer" onClick="setTimeout('resolution()',120)" id="res" />
+                            <input type="submit" value="Reinitialiser" id="button">
+                            <div id="resp">
+                            <h2>Réponses :</h2>
+                            <div id="reponse" > <label>   I1= </label><input type="text" name="i1" size="2" class="rep"/><label>	 I2= </label><input type="text" name="i2" size="2" class="rep"/><label>	 I3= </label><input type="text" name="i3" size="2" class="rep"/><br/> </div>
+                            </div>
+                 
+                        </form>
+                   </div>
+          </div>
+
+                 <!------------------------------------------ CODE CSS ------------------------------------------------------->
+
+    <style>
+    body{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/getty.jpg) ;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+            #bloc{
+                border-radius: 5px;
+                height: 500px;
+                width: 1000px;
+                background:transparent;
+                margin: auto;
+                margin-top: 50px;
+    
+        }
+            #b1, #b2{
+                 padding-bottom: 40px;
+                 border:3px black solid;
+                 display: inline-block;
+                 vertical-align: top;
+                 width: 350px;
+                 height: 300px;		
+        }
+            
+            #b1{
+             word-wrap: break-word;
+               margin:20px;
+            border-radius: 20px;            
+            background-color: white;
+            clear: both;
+            width: 500px;
+            }#b2{ 
+                margin-top: 20px;
+                margin-left: 80px;
+                color: white;
+                border-radius: 20px; 
+                background: rgba(0, 0, 0, 0.774);	
+            }
+            h1,h2{
+                text-align: center;
+             text-decoration: underline;
+            }
+            #res{
+                position: relative;
+                border: 0;
+                background: none;
+                display: inline-block;
+                margin-left: 0;
+                margin-bottom: 40px;
+                margin-top: 30px;
+                text-align: center;
+                border: 2px solid #e08610;
+                padding: 14px 40px;
+                width: 150px;
+                outline: none;
+                color: white; 
+                border-radius: 24px;
+                transition: 0.25s; 
+                font-size: 15px;
+            }
+            #res:hover{
+                color: #e21111fd;
+      background: #e68507;
+      box-shadow: 0 0 10px #e68507, 0 0 40px #e68507, 0 0 80px #e68507;		
+            }
+            h1{
+            color: white;
+            }
+            .rep{
+        
+                color: black;
+                border-radius: 5px;
+                font-size:1.5em;
+                
+            }
+            .resi
+            {
+                position: relative;
+                margin-top: 10px;
+                line-height: 20px;
+                border-radius: 6px;
+                text-align: center;
+                font-size: 20px;
+            }
+            #resp{
+                display: none;
+                
+            }
+    
+            #button
+            {
+                position: relative;
+                border: 0;
+                background: none;
+                margin-left: 20px;
+                text-align: center;
+                border: 2px solid rgba(245, 21, 21, 0.87);
+                padding: 14px 20px;
+                width: 150px;
+                outline: none;
+                color: white; 
+                border-radius: 24px;
+                transition: 0.25s; 
+                font-size: 15px;		  
+            }
+            #button:hover{
+                color: #ff6600;
+                background: #ff0058;
+                box-shadow: 0 0 10px #ff0058, 0 0 40px #ff0058, 0 0 80px #ff0058;		
+                    }
+            form{
+                text-align: center;
+            }
+        </style>
+       
+</body>
+</html>

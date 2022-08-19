@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cramer.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="CRAMER.js"></script>
+    <script src="jquery.js"></script>
+    
+</head>
+<body>
+    <!------------------------------------------ EN TETE DE LA PAGE------------------------------------------------------->
+
+
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="img/js.png">
+            </div>
+            <ul>
+                <li ><a href="mise2.html">Home</a></li>
+                <li><a href="pubicité.html">Publicités</a></li>
+                <li><a href="second degré.html" >Second D.</a></li>
+                <li class="active"><a href="CRAMER.html" >Cramer</a></li>
+                <li><a href="circuit.html">Circuit</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    <!------------------------------------------ EN TETE DE LA PAGE------------------------------------------------------->
+    <div class="navst">
+        <nav class="stl">
+             <h1> 
+                 <span>C</span><span>R</span><span>A</span><span>M</span><span>E</span><span>R</span>
+             </h1>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="box">
+            <span></span>
+            <div class="content">
+    <form method="POST" action="traitement.php" name="equation" id="subject">
+        <h2>Entre les parametres</h2>
+        <input type="text" value="" id="coeff1"><label for="">x</label>
+        <input type="text" value="" id="coeff2"><label for="">y</label>
+        <input type="text" value="" id="coeff3"><label for="">z</label> =
+        <input type="text" value="" id="coeff4"><br>
+        <input type="text" value="" id="coeff1"><label for="">x</label>
+        <input type="text" value="" id="coeff2"><label for="">y</label>
+        <input type="text" value="" id="coeff3"><label for="">z</label> =
+        <input type="text" value="" id="coeff4"><br>
+        <input type="text" value="" id="coeff1"><label for="">x</label>
+        <input type="text" value="" id="coeff2"><label for="">y</label>
+        <input type="text" value="" id="coeff3"><label for="">z</label> =
+        <input type="text" value="" id="coeff4"><br>
+        <input type="button" value="Resoudre" onclick="resolution()" id="button" class="resol">
+        <input type="reset" value="Reinitialiser" onclick="reinitialise()" id="button" class="reset">
+    </form>
+
+    <form name="reponse" method="POST" action=traitement.php" class="answer" >
+        
+        <label for="" id="label1">x=</label><input type="text" value=""  id="answer1">
+        <label for="" id="label2">y=</label><input type="text" value=""  id="answer2">
+        <label for="" id="label3" >z=</label><input type="text" value=""  id="answer3">
+    </form>
+            </div>
+        </div> 
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".answer").hide();
+            $("#button").click(function(){
+                $(".answer").slideDown(3000);
+                
+            });
+
+            $(".btn").click(function(){
+                $(".answer").slideUp(2000);
+            });
+
+            $("input").mouseover(function(){
+                $(this).css("background","");
+            });
+
+            $("input").mouseout(function(){
+                $(this).css("background","");
+            });
+
+        });
+    </script>
+</body>
+</html>

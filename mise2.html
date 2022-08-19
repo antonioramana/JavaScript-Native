@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ma page </title>
+        <meta charset="utf-8" >
+        <link rel="stylesheet" href="mise2.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="main">
+                <div class="logo">
+                    <img src="img/js.png">
+                </div>
+                <ul>
+                    <li class="active"><a href="mise2.html">Home</a></li>
+                    <li><a href="pubicité.html">Publicités</a></li>
+                    <li><a href="second degré.html">Second D.</a></li>
+                    <li><a href="cramer.html">Cramer</a></li>
+                    <li><a href="circuit.html">Circuit</a></li>
+                    
+                </ul>
+            </div>
+            <div class="center">
+                <h1 class="author">Bienvenue sur projets javascript</h1>
+        
+            </div>
+        </header>
+        
+        <script>
+    
+            const text =
+            document.querySelector(".author");
+            const strText= text.textContent;
+            const sliptText= strText.split('');
+            text.textContent = "";
+            for(let i=0; i<sliptText.length;i++){
+             text.innerHTML += '<span>' + sliptText[i] + '</span>';   
+        
+            }
+            let char=0;
+            let timer= setInterval(onright,100);
+        
+            function onright(){
+        
+                const span=
+                text.querySelectorAll("span")[char];
+                span.classList.add("fade");
+                char++;
+                
+        
+                if(char==sliptText.length){
+                    complete();
+                    return;
+        
+                }
+        
+            }
+        function complete(){
+        clearInterval(timer);
+        timer= null;
+        }   
+            </script>
+            <style>
+                .center{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                h1{
+                    text-align: center;
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: rgb(214, 132, 38);
+                    text-transform: uppercase;
+                    letter-spacing: 0.3rem;
+                    text-shadow: 1px 3px 2px rgba(0,0,0,3);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% ,-50%);
+                }
+                span{
+                
+                    opacity: 0;
+                    transition: all 1s;
+                }
+                span.fade{
+                    opacity: 1;
+                
+                }
+                
+                </style>
+    </body>
+    
+</html>

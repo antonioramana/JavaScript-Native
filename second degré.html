@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///E:/javascript/second%20degr%C3%A9.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="second degre.css">
+    <link rel="stylesheet" href="nav.css">
+    <title>Second Degré</title>
+    <script src="second degré.js"></script>
+</head>
+<body>
+     <!------------------------------------------ EN TETE DE LA PAGE------------------------------------------------------->
+
+
+     <header>
+        <div class="main">
+            <div class="logo">
+                <img src="img/js.png">
+            </div>
+            <ul>
+                <li ><a href="mise2.html">Home</a></li>
+                <li><a href="pubicité.html">Publicités</a></li>
+                <li class="active"><a href="second degré.html" >Second D.</a></li>
+                <li ><a href="cramer.html">Cramer</a></li>
+                <li><a href="circuit.html">Circuit</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    <!------------------------------------------ EN TETE DE LA PAGE------------------------------------------------------->
+    <div class="navst">
+        <nav class="stl">
+             <h1> 
+                 <span>S</span><span>E</span><span>C</span><span>O</span><span>N</span><span>D</span> <span>D</span><span>E</span><span>G</span><span>R</span><span>E</span><span>E</span>
+             </h1>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="box">
+            <span></span>
+            <div class="content">
+    <form method="POST" action="file:///E:/javascript/traitement.php" name="tost">
+        <p>Ax²+Bx+C=0</p>
+        <label for="coeff1" style="margin-right: 2px;margin-left: 40px;">A:</label><input type="text" id="coeff1" value="">
+        <label for="coeff2" style="margin-right: 2px;margin-left: 40px;">B:</label><input type="text" id="coeff2" value="">
+        <label for="coeff3" style="margin-right: 2px;margin-left: 40px;">C:</label><input type="text" id="coeff3" value=""><br>
+    
+        <button type="button" onclick="resolution()" class="resol">Résoudre</button>
+        <button type="reset" class="reset">Réinitialiser</button><br>
+        <label id="rep1">x1=</label><input type="text" id="answer1" value="">
+        <label id="rep2">x2=</label><input type="text" id="answer2" value="">
+    </form>  
+            </div>
+        </div> 
+    </div>
+    
+
+</body></html>
